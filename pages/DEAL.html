@@ -115,10 +115,25 @@
             padding-bottom: 1rem;
         }
 
+        .speaker-photo {
+            width: 96px;
+            height: 96px;
+            flex: 0 0 96px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 50%;
+            border: 3px solid #eef3fc;
+            box-shadow: 0 4px 12px rgba(26, 75, 110, 0.16);
+        }
+
         .speaker-name {
             font-weight: 700;
             font-size: 1.1rem;
             color: #1a4b6e;
+        }
+
+        .speaker-name a {
+            color: inherit;
         }
 
         .speaker-affil {
@@ -131,6 +146,20 @@
             font-size: 0.92rem;
             margin-top: 0.3rem;
             color: #2c3e4e;
+        }
+
+        @media (max-width: 560px) {
+            .speaker-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .speaker-photo {
+                width: 112px;
+                height: 112px;
+                flex-basis: 112px;
+            }
         }
 
         /* Schedule Table */
@@ -295,21 +324,21 @@
     <!-- Tutorial Description (brochure + web versions integrated) -->
     <div class="card">
         <div class="card-title">📖 Tutorial Overview</div>
-        <p style="font-size:1.05rem; margin-bottom: 1.2rem;"><strong>How can AI systems scale when direct supervision is limited?</strong> This half-day tutorial examines settings with scarce labels, weak or delayed feedback, and unstable self-generated supervision. It presents a technically grounded framework spanning <strong>data-efficient priors, graph & relational structure as implicit supervision, and adaptive agentic systems</strong> — with emphasis on methods, evaluation, and open challenges broadly relevant to the IJCAI community.</p>
+        <p style="font-size:1.05rem; margin-bottom: 1.2rem;"><strong>How can AI systems scale when direct supervision is limited?</strong> This half-day tutorial connects <strong>data-efficient priors, graph and relational structure, and adaptive agents</strong> across settings with scarce labels, weak feedback, and self-generated supervision.</p>
         
         <div class="two-columns">
             <div class="col">
                 <div style="font-weight: 700; color:#1a6e8f;">🎓 Target Audience</div>
-                <p style="margin-top: 0.5rem;">Researchers & practitioners in machine learning, foundation models, graph learning, and multi-agent systems; PhD students and postdocs seeking a structured entry into limited-supervision methods; expert non-specialists from NLP, data mining, AI for science, and web/social computing. Graduate-level familiarity with ML and neural networks is expected; no prior background in graph learning, instruction tuning, or agentic systems is assumed.</p>
+                <p style="margin-top: 0.5rem;">Researchers, practitioners, and graduate students in machine learning, foundation models, graph learning, multi-agent systems, and AI for science. Basic familiarity with machine learning and neural networks is sufficient.</p>
             </div>
             <div class="col">
                 <div style="font-weight: 700; color:#1a6e8f;">✨ Distinctive Contribution</div>
-                <p style="margin-top: 0.5rem;">A single narrative arc from <strong>priors → structure → interaction</strong>, enabling attendees to compare methods often studied separately and understand shared challenges in stability, evaluation, error propagation, and trustworthy deployment. By the end, participants gain a clear conceptual map, practical guidance on when to apply different limited-supervision strategies, and a research agenda of open questions.</p>
+                <p style="margin-top: 0.5rem;">A unified path from <strong>priors → structure → interaction</strong>, with practical guidance for comparing methods, evaluating reliability, and choosing limited-supervision strategies.</p>
             </div>
         </div>
         <div style="margin-top: 1.2rem; background: #eef3fc; padding: 1rem; border-radius: 1rem;">
-            📌 <strong>Two-Sentence Description (Brochure Version):</strong><br>
-            This half-day tutorial examines how AI systems can scale when direct supervision is limited, including settings with scarce labels, weak or delayed feedback, and unstable self-generated supervision. It presents a unified and technically grounded framework spanning data-efficient priors, graph and relational structure as implicit supervision, and adaptive agentic systems, with emphasis on methods, evaluation, and open challenges broadly relevant to the IJCAI community.
+            📌 <strong>Tutorial at a Glance:</strong><br>
+            A practical framework for building and evaluating AI systems with scarce labels, weak feedback, or self-generated supervision.
         </div>
     </div>
 
@@ -318,31 +347,27 @@
         <div class="card-title">👥 Presenters</div>
         <div class="speaker-list">
             <div class="speaker-item">
-                <div style="min-width: 36px;">🎙️</div>
+                <a href="https://aizxsong.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Visit Zixing Song's personal website"><img class="speaker-photo" src="../images/zixing-song.png" alt="Portrait of Zixing Song" width="96" height="96"></a>
                 <div>
-                    <div class="speaker-name">Song Zixing</div>
+                    <div class="speaker-name"><a href="https://aizxsong.github.io/" target="_blank" rel="noopener noreferrer">Song Zixing</a></div>
                     <div class="speaker-affil">Lecturer (UK Assistant Professor), University of Bristol</div>
                     <div class="speaker-desc">Zixing Song is currently a Lecturer (UK Assistant Professor) at the University of Bristol. Prior to that, he was a Postdoctoral Research Associate at the University of Cambridge. He received his Ph.D. in Computer Science and Engineering from The Chinese University of Hong Kong. He also obtained his B.Eng. in Computer Science from Southeast University in China. His research centers on data-centric graph machine learning and its application to drug design and broader AI4Science domains, driven by a vision of developing data-efficient, agentic, and trustworthy models for social good. Currently, he serves as Vice Chair of the IEEE Computational Intelligence Society (CIS) Task Force on Data-efficient Agentic Learning. He has also received several international awards, including the AAAI New Faculty Highlight, the Junior Research Fellowship at Wolfson College Cambridge, and the INNS Doctoral Dissertation Award.</div>
                 </div>
             </div>
             <div class="speaker-item">
-                <div style="min-width: 36px;">🎙️</div>
+                <a href="https://wangyaqing.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Visit Yaqing Wang's personal website"><img class="speaker-photo" src="../images/yaqing-wang.png" alt="Portrait of Yaqing Wang" width="96" height="96"></a>
                 <div>
-                    <div class="speaker-name">Wang Yaqing</div>
-                    <div class="speaker-affil">Associate Researcher, Beijing Institute of Mathematical Sciences and Applications (BIMSA)</div>
-                    <div class="speaker-desc">Yaqing Wang is an Associate Professor at the Beijing Institute of Mathematical Sciences and Applications (BIMSA). She received her Ph.D. in Computer Science and Engineering from the Hong Kong University of Science and Technology, advised by Prof. Lionel M. Ni and Prof. James T. Kwok. Her research focuses on machine learning and artificial intelligence, with an emphasis on data-efficient generalization, including few-shot learning, in-context learning, and adaptive agents. Dr. Wang has published 37 papers in leading venues such as NeurIPS, ICML, ICLR, KDD, TheWebConf, TPAMI, JMLR, and TIP, with 6000 citations. She serves as an Associate Editor of Neural Networks, an editorial board member of Machine Learning, and an Area Chair for ACL Rolling Review. Her techniques have been deployed in large-scale real-world systems at Baidu, Meituan, and other industry applications. She is a recipient of the AAAI New Faculty Highlight Program and the Beijing Nova Program, and is listed among the World's Top 2% Scientists in 2024 and 2025.</div>
+                    <div class="speaker-name"><a href="https://wangyaqing.github.io/" target="_blank" rel="noopener noreferrer">Wang Yaqing</a></div>
+                    <div class="speaker-affil">Associate Professor, Beijing Institute of Mathematical Sciences and Applications (BIMSA)</div>
+                    <div class="speaker-desc">Yaqing Wang is an Associate Professor at the Beijing Institute of Mathematical Sciences and Applications (BIMSA). She received her Ph.D. in Computer Science and Engineering from the Hong Kong University of Science and Technology (HKUST). Her research interests lie in machine learning and artificial intelligence, with a particular focus on data-efficient learning, including few-shot learning, in-context learning, and adaptive AI agents. She has authored over 40 research papers in leading venues such as NeurIPS, ICML, ICLR, KDD, The Web Conference, IEEE TPAMI, JMLR, and TIP. Her publications have received more than 6,000 citations. Dr. Wang serves as an Associate Editor of <em>Neural Networks</em>, an Editorial Board Member of <em>Machine Learning</em>, and an Area Chair for ACL Rolling Review. She is also an Associate Chair of the IEEE CIS NNTC Task Force on Data-Efficient Agentic Learning. She is a recipient of the Hong Kong PhD Fellowship Scheme and the Beijing Nova Program, and has been recognized among the World's Top 2% Scientists in both 2024 and 2025. She was invited to present her research at the AAAI New Faculty Highlights 2026 and the IJCAI Early Career Spotlights 2026.</div>
                 </div>
             </div>
             <div class="speaker-item">
-                <div style="min-width: 36px;">🎙️</div>
+                <a href="https://lars-group.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Visit Quanming Yao's personal website"><img class="speaker-photo" src="../images/webpage6.JPG" alt="Portrait of Quanming Yao" width="96" height="96"></a>
                 <div>
-                    <div class="speaker-name">Yao Quanming</div>
+                    <div class="speaker-name"><a href="https://lars-group.github.io/" target="_blank" rel="noopener noreferrer">Yao Quanming</a></div>
                     <div class="speaker-affil">Associate Professor, Tsinghua University</div>
-                    <div class="speaker-desc">Dr. Quanming Yao, Associate Professor, Department of Electronic Engineering, Tsinghua University. Previously at 4Paradigm Inc., promoted from Researcher to Senior Scientist, founder and leader of its machine learning research team. Ph.D., HKUST; B.Eng., HUST.
-
-                    IEEE Top 30 Early Career Researchers to Watch; inaugural Intech Prize, Ant Group; Aharon Katzir Young Investigator Award, INNS; Forbes 30 Under 30 China; Google Fellowship. Invited early-career talks at AAAI and IJCAI.
-
-                    Area Chair for ICML, NeurIPS, and ICLR; Tutorial Chair, IJCAI 2025; Program Co-chair, ADMA 2026; Action Editor, IEEE TPAMI; Senior Action Editor, Neural Networks. Fellow of IET; Young Fellow of BAAI. </div>
+                    <div class="speaker-desc">Quanming Yao is an Associate Professor and Ph.D. advisor in the Department of Electronic Engineering at Tsinghua University. He received his Ph.D. in Computer Science and Engineering from the Hong Kong University of Science and Technology (HKUST). Before joining Tsinghua, he was a researcher and senior scientist at 4Paradigm, where he founded and led its machine learning research team. His research spans machine learning and AI for science, with a focus on data-efficient agentic learning, few-shot and in-context learning, knowledge graphs, and biomedical networks. He has published over 120 papers, receiving more than 15,000 citations. Dr. Yao is an IET Fellow and a recipient of IEEE Computing's Top 30, the INNS Aharon Katzir Young Investigator Award, the inaugural Ant InTech Prize, Forbes China 30 Under 30, and the Google Ph.D. Fellowship. He has delivered invited early-career talks at AAAI and IJCAI. He serves as an Area Chair for ICML, NeurIPS, and ICLR; an Action Editor for <em>IEEE TPAMI</em>, <em>Machine Learning</em>, and <em>TMLR</em>; and a Senior Action Editor for <em>Neural Networks</em>. He was Tutorial Chair of IJCAI 2025 and is Program Co-chair of ADMA 2026.</div>
                 </div>
             </div>
         </div>
@@ -361,11 +386,18 @@
                 <tr><td class="time-col">09:05 - 09:55</td><td><span class="session-title">📌 Module A: Principles — Learning with Limited Labels</span><div class="session-presenter">Few-shot learning, meta-learning (optimization/metric/amortized), in-context learning as implicit adaptation, practical trade-offs and limitations</div></td><td>Yaqing Wang</td></tr>
                 <tr><td class="time-col">09:55 - 10:45</td><td><span class="session-title">🔗 Module B: Structures — Relational & Graph Implicit Supervision</span><div class="session-presenter">Experience graphs for data collection; decision graphs for action selection and test-time search; learning graphs for feedback propagation and credit assignment</div></td><td>Zixing Song</td></tr>
                 <tr class="break-row"><td class="time-col">10:45 - 11:10</td><td colspan="2"><span class="session-title">☕ Break & Networking</span></td></tr>
-                <tr><td class="time-col">11:10 - 11:55</td><td><span class="session-title">🤖 Module C: Adaptive Agents under Limited/Delayed Feedback</span><div class="session-presenter">External vs. internal feedback bottlenecks, test-time structural adaptation, multi-agent coordination, disagreement/critique/routing as surrogate supervision, stable self-evolution and safeguards against collapse/overconfidence/drift</div></td><td>Quanming Yao</td></tr>
+                <tr><td class="time-col">11:10 - 11:55</td><td><span class="session-title">🤖 Module C: Adaptive Agents under Limited Feedback</span><div class="session-presenter">From flat in-context adaptation to structured context: interaction-driven adaptation, reusable experience, editable agent workflows, and adaptive multi-agent systems</div></td><td>Quanming Yao</td></tr>
                 <tr><td class="time-col">11:55 - 12:30</td><td><span class="session-title">🧠 Synthesis, Discussion & Q&A</span><div class="session-presenter">Decision-oriented comparison, evaluation principles, trustworthy scaling, open research challenges, and audience discussion</div></td><td>All (moderated by Yao)</td></tr>
             </tbody>
         </table>
         <div class="note" style="margin-top: 0.8rem;">※ Total duration: 3 hours 30 minutes including a 25-minute break. Each module blends core principles, representative methods, practical design trade-offs, and open questions.</div>
+    </div>
+
+    <!-- Module A Abstract -->
+    <div class="card">
+        <div class="card-title">📌 Module A Abstract</div>
+        <p><strong>Principles — Learning with Limited Labels</strong></p>
+        <p>Learning with limited labels requires models to effectively leverage prior experience and adapt to new tasks from only a small amount of supervision. We begin by formulating few-shot learning as generalization across tasks and examine how prior knowledge enables effective learning from a small support set. We then present four major adaptation mechanisms—optimization-based, metric-based, amortization-based meta-learning, and in-context learning—highlighting what is adapted, how adaptation is performed, and the practical strengths and limitations of each approach. Beyond reviewing representative methods, we provide guidance on choosing an appropriate adaptation mechanism and offer a general recipe for translating real-world applications into few-shot learning problems. Case studies in molecular property prediction and user cold-start recommendation demonstrate how task definition, support–query construction, and application-specific insights jointly shape effective solutions under limited supervision.</p>
     </div>
 
     <!-- Module B Abstract -->
@@ -373,6 +405,13 @@
         <div class="card-title">🔗 Module B Abstract</div>
         <p><strong>Structures — Relational &amp; Graph Implicit Supervision</strong></p>
         <p>Graph structure improves agentic learning by increasing the information extracted from scarce labels, rollouts, or interactions. This part of the tutorial organizes methods into three operational lenses. Experience graphs shape data collection by constraining synthesis and exposing intermediate supervision. Decision graphs guide action selection by enabling reusable plans and limited test-time search. Learning graphs propagate feedback by aggregating rollouts and assigning credit from sparse outcomes. We clarify each lens in terms of nodes, edges, and where graph operations act, and discuss representative works.</p>
+    </div>
+
+    <!-- Module C Abstract -->
+    <div class="card">
+        <div class="card-title">🤖 Module C Abstract</div>
+        <p><strong>Adaptive Agents under Limited Feedback: From Flat In-Context Adaptation to Structured Context</strong></p>
+        <p>Agentic tasks require adaptation throughout interaction, even when model parameters remain fixed and explicit feedback is sparse, delayed, or costly. We first examine how observations redirect decisions within a trajectory and how trajectory-level feedback becomes reusable experience across attempts. We then identify the limitations of flat context—mixed semantic roles, difficult credit assignment, and poor reuse—and introduce <strong>Structured Context</strong> as typed, relational, and editable external state. Through a select–compose–update loop, structured context organizes states, constraints, workflows, feedback, and lessons into guidance that can be retrieved and revised. Representative methods illustrate three levels of adaptation: decision-level adaptation through interaction, experience reuse across tasks, and system-level adaptation through editable workflows, dynamic multi-agent organization, and adaptive knowledge routing. We conclude with open challenges in structural credit assignment, memory consolidation and forgetting, and cost-aware continual adaptation.</p>
     </div>
 
     <!-- Responsible AI & Key Risks -->
@@ -388,9 +427,12 @@
             <li>Generalizing from a Few Examples: A Survey on Few-Shot Learning. <em>ACM Computing Surveys</em>, 2020.</li>
             <li>Finetuned Language Models Are Zero-Shot Learners. <em>ICLR</em>, 2022.</li>
             <li>Why In-Context Learning Models are Good Few-Shot Learners? <em>ICLR</em>, 2025.</li>
+            <li>ReAct: Synergizing Reasoning and Acting in Language Models. <em>ICLR</em>, 2023.</li>
+            <li>ExpeL: LLM Agents Are Experiential Learners. <em>AAAI</em>, 2024.</li>
             <li>No Change, No Gain: Empowering Graph Neural Networks with Expected Model Change Maximization for Active Learning. <em>NeurIPS</em>, 2023.</li>
             <li>Beyond Scaling: A Survey on Data-Efficient Agentic Learning. <em>IJCAI</em>, 2026.</li>
             <li>Reflexion: Language Agents with Verbal Reinforcement Learning. <em>NeurIPS</em>, 2023.</li>
+            <li>G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems. <em>NeurIPS</em>, 2025.</li>
             <li>Language Model Networks: Supervision-Efficient Learning through Dense Communication. <em>ICML</em>, 2026.</li>
             <li>AFlow: Automating Agentic Workflow Generation. <em>ICLR</em>, 2025.</li>
         </ul>
