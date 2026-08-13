@@ -100,6 +100,14 @@
             min-width: 250px;
         }
 
+        .slide-link {
+            display: inline-block;
+            margin-top: 0.45rem;
+            color: #1a5f7a;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
         /* Speakers */
         .speaker-list {
             display: flex;
@@ -342,6 +350,25 @@
         </div>
     </div>
 
+    <!-- Schedule -->
+    <div class="card">
+        <div class="card-title">⏱️ Tutorial Schedule (Half-day, includes 25-minute break)</div>
+        <table class="schedule-table">
+            <thead>
+                <tr><th>Time</th><th>Session / Topic</th><th>Presenter(s)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="time-col">09:00 - 09:05</td><td><span class="session-title">🎬 Opening & Framing</span><div class="session-presenter">Supervision bottlenecks, unifying taxonomy, cross-cutting failure modes (bias amplification, confirmation loops, unstable self-improvement)</div><a class="slide-link" href="DEAL/IJCAI_Tutorial_Open.pdf" target="_blank" rel="noopener noreferrer">View slides (PDF)</a></td><td>All (lead: Q. Yao)</td></tr>
+                <tr><td class="time-col">09:05 - 09:55</td><td><span class="session-title">📌 Module A: Principles — Learning with Limited Labels</span><div class="session-presenter">This module explains how prior experience enables learning from a small support set. It compares optimization-, metric-, and amortization-based meta-learning with in-context learning, then shows how to formulate practical few-shot problems through molecular prediction and cold-start recommendation examples.</div><a class="slide-link" href="DEAL/IJCAI_Tutorial_Module_A.pdf" target="_blank" rel="noopener noreferrer">View slides (PDF)</a></td><td>Yaqing Wang</td></tr>
+                <tr><td class="time-col">09:55 - 10:45</td><td><span class="session-title">🔗 Module B: Structures — Relational & Graph Implicit Supervision</span><div class="session-presenter">This module shows how graph structure extracts more information from scarce labels, rollouts, and interactions. It introduces experience graphs for data collection, decision graphs for planning and action selection, and learning graphs for feedback propagation and credit assignment.</div><a class="slide-link" href="DEAL/IJCAI_Tutorial_Module_B.pdf" target="_blank" rel="noopener noreferrer">View slides (PDF)</a></td><td>Zixing Song</td></tr>
+                <tr class="break-row"><td class="time-col">10:45 - 11:10</td><td colspan="2"><span class="session-title">☕ Break & Networking</span></td></tr>
+                <tr><td class="time-col">11:10 - 11:55</td><td><span class="session-title">🤖 Module C: Adaptive Agents under Limited Feedback</span><div class="session-presenter">This module examines how agents adapt during interaction when feedback is sparse or delayed. It develops structured context as editable external state for retrieving and revising experience, then connects decision-level adaptation to reusable workflows, dynamic multi-agent organization, and adaptive knowledge routing.</div><a class="slide-link" href="DEAL/IJCAI_Tutorial_Module_C.pdf" target="_blank" rel="noopener noreferrer">View slides (PDF)</a></td><td>Quanming Yao</td></tr>
+                <tr><td class="time-col">11:55 - 12:30</td><td><span class="session-title">🧠 Synthesis, Discussion & Q&A</span><div class="session-presenter">Decision-oriented comparison, evaluation principles, trustworthy scaling, open research challenges, and audience discussion</div></td><td>All (moderated by Yao)</td></tr>
+            </tbody>
+        </table>
+        <div class="note" style="margin-top: 0.8rem;">※ Total duration: 3 hours 30 minutes including a 25-minute break. Each module blends core principles, representative methods, practical design trade-offs, and open questions.</div>
+    </div>
+
     <!-- Speakers -->
     <div class="card">
         <div class="card-title">👥 Presenters</div>
@@ -372,46 +399,6 @@
             </div>
         </div>
         <div class="note" style="margin-top: 0.8rem;">📌 Together, the presenters offer an integrated view across priors, structure, and interaction.</div>
-    </div>
-
-    <!-- Schedule -->
-    <div class="card">
-        <div class="card-title">⏱️ Tutorial Schedule (Half-day, includes 25-minute break)</div>
-        <table class="schedule-table">
-            <thead>
-                <tr><th>Time</th><th>Session / Topic</th><th>Presenter(s)</th></tr>
-            </thead>
-            <tbody>
-                <tr><td class="time-col">09:00 - 09:05</td><td><span class="session-title">🎬 Opening & Framing</span><div class="session-presenter">Supervision bottlenecks, unifying taxonomy, cross-cutting failure modes (bias amplification, confirmation loops, unstable self-improvement)</div></td><td>All (lead: Q. Yao)</td></tr>
-                <tr><td class="time-col">09:05 - 09:55</td><td><span class="session-title">📌 Module A: Principles — Learning with Limited Labels</span><div class="session-presenter">Few-shot learning, meta-learning (optimization/metric/amortized), in-context learning as implicit adaptation, practical trade-offs and limitations</div></td><td>Yaqing Wang</td></tr>
-                <tr><td class="time-col">09:55 - 10:45</td><td><span class="session-title">🔗 Module B: Structures — Relational & Graph Implicit Supervision</span><div class="session-presenter">Experience graphs for data collection; decision graphs for action selection and test-time search; learning graphs for feedback propagation and credit assignment</div></td><td>Zixing Song</td></tr>
-                <tr class="break-row"><td class="time-col">10:45 - 11:10</td><td colspan="2"><span class="session-title">☕ Break & Networking</span></td></tr>
-                <tr><td class="time-col">11:10 - 11:55</td><td><span class="session-title">🤖 Module C: Adaptive Agents under Limited Feedback</span><div class="session-presenter">From flat in-context adaptation to structured context: interaction-driven adaptation, reusable experience, editable agent workflows, and adaptive multi-agent systems</div></td><td>Quanming Yao</td></tr>
-                <tr><td class="time-col">11:55 - 12:30</td><td><span class="session-title">🧠 Synthesis, Discussion & Q&A</span><div class="session-presenter">Decision-oriented comparison, evaluation principles, trustworthy scaling, open research challenges, and audience discussion</div></td><td>All (moderated by Yao)</td></tr>
-            </tbody>
-        </table>
-        <div class="note" style="margin-top: 0.8rem;">※ Total duration: 3 hours 30 minutes including a 25-minute break. Each module blends core principles, representative methods, practical design trade-offs, and open questions.</div>
-    </div>
-
-    <!-- Module A Abstract -->
-    <div class="card">
-        <div class="card-title">📌 Module A Abstract</div>
-        <p><strong>Principles — Learning with Limited Labels</strong></p>
-        <p>Learning with limited labels requires models to effectively leverage prior experience and adapt to new tasks from only a small amount of supervision. We begin by formulating few-shot learning as generalization across tasks and examine how prior knowledge enables effective learning from a small support set. We then present four major adaptation mechanisms—optimization-based, metric-based, amortization-based meta-learning, and in-context learning—highlighting what is adapted, how adaptation is performed, and the practical strengths and limitations of each approach. Beyond reviewing representative methods, we provide guidance on choosing an appropriate adaptation mechanism and offer a general recipe for translating real-world applications into few-shot learning problems. Case studies in molecular property prediction and user cold-start recommendation demonstrate how task definition, support–query construction, and application-specific insights jointly shape effective solutions under limited supervision.</p>
-    </div>
-
-    <!-- Module B Abstract -->
-    <div class="card">
-        <div class="card-title">🔗 Module B Abstract</div>
-        <p><strong>Structures — Relational &amp; Graph Implicit Supervision</strong></p>
-        <p>Graph structure improves agentic learning by increasing the information extracted from scarce labels, rollouts, or interactions. This part of the tutorial organizes methods into three operational lenses. Experience graphs shape data collection by constraining synthesis and exposing intermediate supervision. Decision graphs guide action selection by enabling reusable plans and limited test-time search. Learning graphs propagate feedback by aggregating rollouts and assigning credit from sparse outcomes. We clarify each lens in terms of nodes, edges, and where graph operations act, and discuss representative works.</p>
-    </div>
-
-    <!-- Module C Abstract -->
-    <div class="card">
-        <div class="card-title">🤖 Module C Abstract</div>
-        <p><strong>Adaptive Agents under Limited Feedback: From Flat In-Context Adaptation to Structured Context</strong></p>
-        <p>Agentic tasks require adaptation throughout interaction, even when model parameters remain fixed and explicit feedback is sparse, delayed, or costly. We first examine how observations redirect decisions within a trajectory and how trajectory-level feedback becomes reusable experience across attempts. We then identify the limitations of flat context—mixed semantic roles, difficult credit assignment, and poor reuse—and introduce <strong>Structured Context</strong> as typed, relational, and editable external state. Through a select–compose–update loop, structured context organizes states, constraints, workflows, feedback, and lessons into guidance that can be retrieved and revised. Representative methods illustrate three levels of adaptation: decision-level adaptation through interaction, experience reuse across tasks, and system-level adaptation through editable workflows, dynamic multi-agent organization, and adaptive knowledge routing. We conclude with open challenges in structural credit assignment, memory consolidation and forgetting, and cost-aware continual adaptation.</p>
     </div>
 
     <!-- Responsible AI & Key Risks -->
